@@ -143,9 +143,9 @@ const styles = StyleSheet.create({
   },
   horizontalLine: {
     flex: 1,
-    height: StyleSheet.hairlineWidth, // or any other width you desire
-    backgroundColor: 'black', // color of the line
-    marginHorizontal: 5, // adjust as needed
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: 'black',
+    marginHorizontal: 5,
   },
   orText: {
     marginHorizontal: 10,

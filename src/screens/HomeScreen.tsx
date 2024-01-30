@@ -9,7 +9,7 @@ export const HomeScreen = () => {
         let user = FIREBASE_AUTH.currentUser
 
         while (!user) {
-          await new Promise((resolve) => setTimeout(resolve, 1000)) // Adjust the delay as needed
+          await new Promise((resolve) => setTimeout(resolve, 1000))
           user = FIREBASE_AUTH.currentUser
         }
       } catch (error) {

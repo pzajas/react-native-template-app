@@ -4,8 +4,7 @@ import { UserLoggedNavigation } from './UserLoggedNavigation'
 import { useEffect, useState } from 'react'
 import { ActivityIndicator } from 'react-native'
 import { useSelector } from 'react-redux'
-import { FIREBASE_AUTH, FIREBASE_DB } from '../../Firebase'
-import { collection, doc, getDoc, getDocs, getFirestore, query, where } from 'firebase/firestore'
+import { FIREBASE_AUTH } from '../../Firebase'
 
 const LoadingScreen = () => {
   return <ActivityIndicator />

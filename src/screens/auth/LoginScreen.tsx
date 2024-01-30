@@ -38,7 +38,6 @@ export const LoginScreen = () => {
         await sendEmailVerification(response.user)
       }
     } catch (error) {
-      // console.log(error)
       setError('password', { type: 'manual', message: 'Invalid email or password' })
     } finally {
       setLoading(false)

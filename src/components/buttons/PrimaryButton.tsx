@@ -1,6 +1,5 @@
 import { theme } from '../../../src/styles/theme'
 import { View, Text, Pressable, StyleSheet, ViewStyle, DimensionValue } from 'react-native'
-
 interface IPrimaryButton {
   text: string
   width?: DimensionValue
