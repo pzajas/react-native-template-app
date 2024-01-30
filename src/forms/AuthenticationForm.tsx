@@ -4,13 +4,11 @@ import { useForm, Controller } from 'react-hook-form'
 import { FIREBASE_AUTH } from '../../Firebase'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'
 import { PrimaryButton } from '../../src/components/buttons/PrimaryButton'
-import { useNavigation } from '@react-navigation/native'
 import { useDispatch } from 'react-redux'
 import { setIsEmailVerified } from '../redux/features/loginSlice'
-import { collection, addDoc, setDoc, doc } from 'firebase/firestore'
+import { collection, setDoc, doc } from 'firebase/firestore'
 import { getFirestore } from 'firebase/firestore'
 import uuid from 'react-native-uuid'
-
 interface IAutenticationForm {
   isLoginPanelVisible: boolean
 }
@@ -72,7 +70,6 @@ export const AuthenticationForm = ({ isLoginPanelVisible }: IAutenticationForm) 
     } catch (error) {
       console.error(error)
 
-      // Handle the error and display a message to the user
       setError('password', { type: 'manual', message: error.message })
     } finally {
       setLoading(false)
@@ -82,7 +79,6 @@ export const AuthenticationForm = ({ isLoginPanelVisible }: IAutenticationForm) 
 
   const sendVerificationEmail = async (user) => {
     try {
-      // Use the correct function from Firebase Auth to send email verification
       await sendEmailVerification(user)
       console.log('Verification email sent successfully')
     } catch (error) {
