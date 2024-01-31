@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 
-export const ProjectsScreen = () => {
+export const StatsScreen = () => {
   return (
     <View style={styles.screenContainer}>
-      <Text>Projects Screen</Text>
+      <Text>Stats Screen</Text>
     </View>
   )
 }
